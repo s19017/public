@@ -1,30 +1,26 @@
-CTYPE html><html><head>
+<!DOCTYPE html><html><head>
   <meta charset="utf-8">
-  <script src="https://unpkg.com/react@15/dist/react.min.js"></script>
-  <script src="https://unpkg.com/react-dom@15/dist/react-dom.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.38/browser.min.js"></script>
+  <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+  <script src=https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.min.js></script>
 </head><body>
   <div id="root"></div>
   <script type="text/babel">
-    // ReactでDOMを書き換える
     ReactDOM.render(
       getDOM(),
       document.getElementById('root')
     )
-    // 要素を返す関数
     function getDOM() {
-      // オブジェクトでスタイルを指定 --- (※1)
-      const css1 = { // cssのスタイルで --- (※2)
+      const css1 = { 
         "color": 'red',
         "background-color": '#f0f0ff',
         "font-size": '2em'
       }
-      const css2 = { // JavaScriptのスタイルで --- (※3)
+      const css2 = { 
         color: 'blue',
         backgroundColor: '#fff0f0',
         fontSize: '2em'
       }
-      // JSXでDOMIIIIIを指定
       return (
         <div>
           <p style={css1}>探すのに時があり</p>
